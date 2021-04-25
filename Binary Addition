@@ -1,0 +1,16 @@
+function decimalToBinary(sum){
+  let binary = "";
+  while(sum > 0){
+    let remainder = sum % 2;
+    sum /= 2;
+    sum = Math.trunc(sum);
+    binary = remainder.toString() + binary;
+  }
+  
+  return binary;
+}
+function addBinary(a,b) {
+  let sum = a+b;
+  let binaryFormOfSum = decimalToBinary(sum);
+  return binaryFormOfSum;
+}
